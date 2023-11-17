@@ -1,0 +1,201 @@
+/* Author Emily Reger 2023 */
+
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Righteous&display=swap');
+
+/* RESET CSS
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* --- END OF RESET --- */
+
+/* --- GLOBAL --- */
+
+:root {
+	--dark_green: #23382e;
+	--beige: #bca497;
+	--black: #000;
+	--white: #fff;
+	--light_blue: #739ab1;
+}
+
+h1, h2, li, h3{
+	font-family: 'Righteous', sans-serif;
+}
+
+h1 {
+	font-size: 2.5em;
+	padding: 1em;
+}
+
+h2 {
+	font-size: 1.5em;
+	padding: 1em;
+}
+
+h3{
+	padding: .75em;
+	font-size: 1em;
+}
+
+p {
+	font-family: 'Poiret One', sans-serif;
+	font-weight: bold;
+	padding-top: 10px;
+	font-size: 1.25em;
+}
+
+body {
+	background-color: var(--beige);
+	color: var(--dark_green);
+	padding: 50px;
+}
+
+
+nav {
+	padding: 10px;
+	height: 10%;
+	width: 100%;
+	margin-left: 5%;
+}
+
+nav a:link, nav a:visited {
+	color: var(--dark_green);
+	background-color: var(--beige);
+	padding: 10px;
+	line-height: 3em;
+	font-size: 2em;
+}
+
+nav a:hover {
+	background-color: var(--light_blue);
+}
+
+#contact a:link, #contact a:visited {
+	color: var(--dark_green);
+	background-color: var(--beige);
+	padding: 10px;
+	line-height: 3em;
+	font-size: 1.25em;
+}
+
+#contact a:hover {
+	background-color: var(--light_blue);
+}
+
+#contact li {
+	display: inline;
+}
+
+/* --- END - GLOBAL --- */
+
+/* --- LIGHT/DARK MODE & L/D BUTTONS --- */
+.dark-mode{
+	background-color: var(--dark_green);
+	color: var(--beige);
+}
+
+.light-mode{
+	background-color: var(--beige);
+	color: var(--dark_green);
+}
+
+img.light_logo, img.dark_logo {
+	max-height: 300px;
+	max-width: 300px;
+	width: 50%;
+	padding: 1em;
+	margin: auto;
+}
+
+button#lightmode {
+	font-family: 'Righteous', sans-serif;
+	background-color: var(--beige);
+	border: 2px solid var(--dark_green);
+	border-radius: 100%;
+	padding: 20px;
+	color: var(--dark_green);
+	font-size: 1.5em;
+	margin-left: 10%;
+}
+
+button#darkmode {
+	font-family: 'Righteous', sans-serif;
+	background-color: var(--dark_green);
+	border: 2px solid var(--beige);
+	border-radius: 100%;
+	padding: 20px;
+	color: var(--beige);
+	font-size: 1.5em;
+	margin-left: 10%;
+}
+
+.hide {
+	display: none;
+}
+/* --- END - LIGHT/DARK MODE BUTTONS --- */
+
+/* --- PORTFOLIO PROJECTS --- */
+
+#portfolio img {
+	width: 100%;
+}
+
+#portfolio p {
+	padding-left: 10px;
+}
+
+/* --- END - PORTFOLIO PROJECTS --- */
+
+/* --- DESKTOP --- */
+@media screen and (min-width: 1000px) {
+	.grid1 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+}
